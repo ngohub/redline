@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>خط أحمر | سلامتك الرقمية خط أحمر - الأمن السيبراني وحماية الفتيات</title>
+  <meta name="description" content="مبادرة خط أحمر - المنصة التفاعلية الرائدة للتوعية بالأمن السيبراني، حماية الفتيات واليافعات من الابتزاز الرقمي، وتعزيز السلامة الرقمية مزودة بـ لوحة تحكم كاملة.">
+  <meta name="keywords" content="خط أحمر, الأمن السيبراني, حماية الفتيات, الابتزاز الرقمي, السلامة الرقمية, لوحة تحكم, CMS Dashboard">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Flat Files Relative CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       الترويسة وحسابات الملاحة (Navbar)
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fas fa-shield-halved" style="color: var(--accent-red);"></i>
+        <span id="renderedHeroTitle">خط أحمر</span>
+        <span class="logo-badge">آمن 100%</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+        <li><a href="#guides" class="nav-link">مركز التوعية</a></li>
+        <li><a href="#tools" class="nav-link">الأدوات التفاعلية</a></li>
+        <li><a href="#quiz" class="nav-link">اختبار الأمان</a></li>
+        <li><a href="#support" class="nav-link">دليل الطوارئ</a></li>
+        <li><a href="#about" class="nav-link">عن المبادرة</a></li>
+        <li><a href="#" class="nav-link open-admin-login" style="color:var(--accent-amber);"><i class="fas fa-cog"></i> لوحة التحكم</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Quick Emergency Panic Button -->
+        <button class="btn-panic" title="خروج سريع وآمن فوراً لو هناك من يراقب شاشتك">
+          <i class="fas fa-bolt"></i>
+          <span>خروج سريع</span>
+        </button>
+
+        <!-- Dark/Light Theme Toggle Button -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="تبديل النمط">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <!-- Admin CMS Shortcut -->
+        <button class="theme-toggle open-admin-login" title="لوحة تحكم المشرف (Admin CMS)" style="border-color:var(--accent-amber); color:var(--accent-amber);">
+          <i class="fas fa-user-shield"></i>
+        </button>
+
+        <!-- CTA Header Button -->
+        <a href="#support" class="btn btn-primary open-report-modal" style="padding: 0.5rem 1rem; font-size: 0.9rem; min-height:40px;">
+          <i class="fas fa-headset"></i>
+          <span>طلب مساعدة</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       1. الواجهة الرئيسية (Hero Section)
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-badge">
+          <i class="fas fa-award" style="color: var(--accent-amber);"></i>
+          <span>مشاركة في جائزة الفتاة العربية والتكنولوجيا 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          مبادرة <span id="renderedHeroTitle">خط أحمر</span>
+        </h1>
+
+        <p class="hero-slogan" id="renderedHeroSlogan">"سلامتك الرقمية.. خط أحمر"</p>
+
+        <p class="hero-description" id="renderedHeroDesc">
+          المنصة العربية الشاملة للتوعية بالأمن السيبراني وحماية الفتيات واليافعات (12-17 سنة) والأسر في كافة الوطن العربي من الابتزاز والاحتيال ببيئة مشفرة 100%.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary open-report-modal">
+            <i class="fas fa-user-shield"></i>
+            <span>احصل على مساعدة فورية</span>
+          </button>
+          <a href="#guides" class="btn btn-secondary">
+            <i class="fas fa-compass"></i>
+            <span>استكشف دليلي للأمان</span>
+          </a>
+        </div>
+
+        <div class="hero-features-strip">
+          <div class="strip-item">
+            <i class="fas fa-lock"></i>
+            <span>سرية مشفرة 100%</span>
+          </div>
+          <div class="strip-item">
+            <i class="fas fa-clock"></i>
+            <span>دعم 24/7 لكل الدول العربية</span>
+          </div>
+          <div class="strip-item">
+            <i class="fas fa-heart"></i>
+            <span>بدون لوم أو أحكام</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-card">
+          <img src="./hero.jpg" alt="الأمن السيبراني خط أحمر" class="hero-img">
+        </div>
+
+        <div class="floating-badge floating-badge-1">
+          <div class="badge-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
+          <div class="badge-text">
+            <h4>حماية متكاملة</h4>
+            <p>مقاييس أمان فائقة للفتيات</p>
+          </div>
+        </div>
+
+        <div class="floating-badge floating-badge-2">
+          <div class="badge-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+            <i class="fas fa-user-secret"></i>
+          </div>
+          <div class="badge-text">
+            <h4>إبلاغ آمن</h4>
+            <p>بدون تتبع أو تسجيل بيانات</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience Selector Switcher Filter -->
+  <div class="container target-audience-bar">
+    <div class="target-tabs">
+      <div class="target-tab active" data-target="all">
+        <i class="fas fa-layer-group"></i>
+        <span>جميع الأدلة</span>
+      </div>
+      <div class="target-tab" data-target="teens">
+        <i class="fas fa-user-graduate"></i>
+        <span>دليل الفتيات واليافعات (12-17 سنة)</span>
+      </div>
+      <div class="target-tab" data-target="parents">
+        <i class="fas fa-users"></i>
+        <span>دليل أولياء الأمور والأسرة</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. مركز التوعية والتعليم التفاعلي (Awareness Center)
+       ========================================================================== -->
+  <section class="section" id="guides">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">مركز المعرفة والتوعية</span>
+        <h2 class="section-title">أدلة الأمان والتوعية الرقمية التفاعلية</h2>
+        <p class="section-subtitle">
+          تعلمي كيفية حماية حساباتك، اكتشاف محاولات الاختراق والاحتيال، والتصرف بحكمة وسرعة في كافة المواقف الرقمية.
+        </p>
+      </div>
+
+      <!-- Dynamically Rendered Guides Grid -->
+      <div class="guides-grid" id="renderedGuidesGrid"></div>
+
+      <!-- Live Interactive Tools Suite -->
+      <div class="interactive-tools-wrapper" id="tools">
+        <!-- Tool 1: Live Password Evaluator -->
+        <div class="tool-box">
+          <div class="tool-header">
+            <i class="fas fa-sliders-h"></i>
+            <div>
+              <h3>فاحص قوة كلمة السر الحية</h3>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">اختبري كلمة سرك محلياً على جهازك دون إرسالها لأي خادم</p>
+            </div>
+          </div>
+
+          <div class="pass-input-group">
+            <input type="password" id="passCheckerInput" placeholder="اكتبي كلمة السر هنا لاختبارها...">
+            <i class="fas fa-eye toggle-pass-visibility" id="togglePassVisibility"></i>
+          </div>
+
+          <div class="pass-meter-bar">
+            <div class="pass-meter-fill" id="passMeterFill"></div>
+          </div>
+
+          <div class="pass-feedback">
+            <span id="passFeedbackText">أدخلي كلمة السر لاختبارها</span>
+            <span id="passScoreText"></span>
+          </div>
+
+          <ul class="pass-tips">
+            <li><i class="fas fa-check-circle" style="color:var(--accent-emerald);"></i> يفضل ألا تقل عن 12 رمزاً</li>
+            <li><i class="fas fa-check-circle" style="color:var(--accent-emerald);"></i> استخدمي رموزاً خاصة مثل (@, #, $, %)</li>
+            <li><i class="fas fa-check-circle" style="color:var(--accent-emerald);"></i> تنويع بين الأحرف الكبيرة والصغيرة والأرقام</li>
+          </ul>
+        </div>
+
+        <!-- Tool 2: Phishing Simulator Game -->
+        <div class="tool-box">
+          <div class="tool-header">
+            <i class="fas fa-gamepad" style="color:var(--accent-purple);"></i>
+            <div>
+              <h3>محاكي كشف الرسائل الاحتيالية</h3>
+              <p style="font-size:0.88rem; color:var(--text-secondary);">اختبري مهاراتك في تمييز الرسائل الآمنة من الاحتيال</p>
+            </div>
+          </div>
+
+          <div class="phish-card-box">
+            <div class="phish-sender" id="phishSender">جاري التحميل...</div>
+            <div class="phish-msg-text" id="phishMsgText">...</div>
+          </div>
+
+          <div class="phish-actions">
+            <button class="btn-phish real" onclick="checkPhishingAnswer(false)">
+              <i class="fas fa-check"></i> رسالة آمنة
+            </button>
+            <button class="btn-phish scam" onclick="checkPhishingAnswer(true)">
+              <i class="fas fa-triangle-exclamation"></i> رسالة احتيالية
+            </button>
+          </div>
+
+          <div class="phish-result-alert" id="phishResultAlert"></div>
+
+          <div style="margin-top:1.2rem; text-align:left;">
+            <button class="btn btn-secondary" id="nextPhishBtn" style="padding:0.5rem 1rem; font-size:0.85rem; min-height:40px;">
+              <span>الرسالة التالية</span>
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       اختبار التوعية السريع (Cyber Awareness Quiz)
+       ========================================================================== -->
+  <section class="section quiz-section" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">تقييم الوعي الذاتي</span>
+        <h2 class="section-title">اختبار التوعية بالأمن السيبراني السريع</h2>
+        <p class="section-subtitle">
+          اختبري مدى استعدادك لمعالجة المواقف الرقمية الخطرة وحماية نفسك وعائلتك عبر هذا الاختبار التفاعلي الممتع.
+        </p>
+      </div>
+
+      <div class="quiz-container">
+        <!-- Active Quiz Box -->
+        <div id="quizBox">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+
+          <span class="quiz-question-num" id="quizNum">السؤال 1 من 5</span>
+          <h3 class="quiz-question-title" id="quizTitle">جاري تحميل السؤال...</h3>
+
+          <div class="quiz-options" id="quizOptions"></div>
+
+          <div class="quiz-explanation" id="quizExp"></div>
+
+          <div class="quiz-footer-nav">
+            <span style="font-size:0.88rem; color:var(--text-muted);">اختبار آمن لغايات التعليم والتوعية</span>
+            <button class="btn btn-primary" id="quizNextBtn" style="display:none;">
+              <span>السؤال التالي</span>
+              <i class="fas fa-arrow-left"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Result Completion Box -->
+        <div class="quiz-result-box" id="quizResultBox">
+          <div class="quiz-result-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="quiz-score-badge" id="quizScoreBadge">0%</div>
+          <h3 id="quizResultTitle" style="font-size: 1.8rem; margin-bottom: 0.8rem;"></h3>
+          <p id="quizResultMsg" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem;"></p>
+
+          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <button class="btn btn-primary" onclick="resetQuiz()">
+              <i class="fas fa-redo"></i>
+              <span>إعادة الاختبار</span>
+            </button>
+            <button class="btn btn-secondary open-report-modal">
+              <i class="fas fa-shield-alt"></i>
+              <span>طلب استشارة أمان</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. دليل أرقام الطوارئ والدول والإبلاغ الآمن
+       ========================================================================== -->
+  <section class="section" id="support">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">الأمان والسرية لكل الدول العربية</span>
+        <h2 class="section-title">دليل أرقام الطوارئ العربية والبوابة المشفرة</h2>
+        <p class="section-subtitle">
+          نحن بجانبك خطوة بخطوة في جميع الدول العربية الـ 22. تواصلك معنا مشفر ومحمي بخصوصية تامة 100%.
+        </p>
+      </div>
+
+      <div class="support-grid">
+        <!-- Roadmap Steps -->
+        <div class="roadmap-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>استجمعي شجاعتك ولا تخفي</h4>
+              <p>تذكري دائماً أنك الضحية والمبتز هو الجاني. لا تلومي نفسك ولا تستجيبي لتهديداته المادية أو المعنوية.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>وثّقي الأدلة بحذر (Don't Delete)</h4>
+              <p>خذي لقطات شاشة (Screenshots) لكافة الرسائل، أرقام الهواتف، والروابط قبل حظر المبتز دون مسحها.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>احظري حساب المبتز تماماً</h4>
+              <p>افصلي قنوات الاتصال معه لمنع ممارسة الضغط النفسي، ولا تقومي بدفع أي مبالغ مالية إطلاقاً.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>تواصل معنا فوراً لسندك</h4>
+              <p>أرسلي بلاغاً أو استشارة سرية عبر بوابة خط أحمر، أو اتصلي بالخط الساخن المعتمد في بلدك.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotlines Directory Box -->
+        <div class="hotlines-card">
+          <h3 style="font-size:1.4rem; margin-bottom:0.8rem; text-align:center;">
+            <i class="fas fa-phone-volume" style="color:var(--accent-red);"></i>
+            دليل طوارئ الجرائم الإلكترونية لكل الدول العربية (22 دولة)
+          </h3>
+          <p style="text-align:center; color:var(--text-secondary); font-size:0.88rem; margin-bottom:1.2rem;">
+            اختاري دولتك للحصول الفوري على أرقام وحدات مكافحة الجرائم الإلكترونية وخطوط حماية الأطفال:
+          </p>
+
+          <select class="country-selector" id="countrySelect"></select>
+
+          <div class="hotline-display">
+            <span style="font-size:0.85rem; color:var(--text-muted);" id="hotlineCountryName">🇸🇦 المملكة العربية السعودية</span>
+            <span class="hotline-num" id="hotlineNumberDisplay">1909</span>
+            <p style="font-size:0.85rem; color:var(--text-secondary);" id="hotlineNotesDisplay">إدارة الجرائم المعلوماتية - الأمن العام وخط مساندة الطفل</p>
+          </div>
+
+          <div class="hotline-actions">
+            <button class="btn btn-secondary" id="copyHotlineBtn" style="flex:1;">
+              <i class="fas fa-copy"></i>
+              <span>نسخ الرقم</span>
+            </button>
+            <button class="btn btn-primary open-report-modal" style="flex:1;">
+              <i class="fas fa-paper-plane"></i>
+              <span>بلاغ مشفر عبر المنصة</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. عن المبادرة وجائزة الفتاة العربية والتكنولوجيا
+       ========================================================================== -->
+  <section class="section" id="about" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag">رؤيتنا ورسالتنا</span>
+          <h2 class="section-title">عن مبادرة "خط أحمر"</h2>
+          <p style="font-size:1.05rem; color:var(--text-secondary); margin-bottom:1.2rem;">
+            مبادرة توعوية وتقنية طموحة صُممت بأيدي كفاءات عربية متميزة لتعزيز الثقافة السيبرانية وتوفير مظلة أمان وتكاتف للفتيات واليافعات وأسرهن في كل الوطن العربي، حمايةً لهن من الابتزاز والاختراق والتنمر الرقمي.
+          </p>
+          <p style="font-size:1rem; color:var(--text-secondary); margin-bottom:1.8rem;">
+            نسعى لخلق فضاء رقمي عربي آمن يُمكن الفتاة العربية من استخدام التكنولوجيا بشغف وثقة، دون خوف أو تهديد لحريتها وخصوصيتها.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" id="renderedStatSecured">100%</div>
+              <div class="stat-label">سرية وتشفير البيانات</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="renderedStatUsers">+50k</div>
+              <div class="stat-label">مستفيدة في العالم العربي</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="renderedStatHours">24/7</div>
+              <div class="stat-label">جاهزية الإرشاد والاستجابة</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="renderedStatCountries">22</div>
+              <div class="stat-label">دولة عربية مدعومة بالكامل</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Award Highlight Card -->
+        <div class="award-card">
+          <img src="./award.jpg" alt="جائزة الفتاة العربية والتكنولوجيا" class="award-badge-img">
+          <div class="award-tag">
+            <i class="fas fa-crown"></i> جائزة الفتاة العربية والتكنولوجيا
+          </div>
+          <h3 style="font-size:1.5rem; margin-bottom:0.8rem;" id="renderedAwardTitle">تمكين وتألق الفتاة العربية في الابتكار</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.4rem;" id="renderedAwardDesc">
+            تفخر مبادرة "خط أحمر" بمشاركتها المتميزة في جائزة الفتاة العربية والتكنولوجيا، كمشروع رائد يدمج بين الابتكار التقني، التمكين الأنثوي، والتأثير المجتمعي المستدام لحماية أجيال المستقبل.
+          </p>
+          <button class="btn btn-secondary open-report-modal" style="width:100%;">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span>انضمي إلينا أو اطلبي الدعم</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. تذييل الصفحة (Footer)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo" style="margin-bottom: 1rem;">
+            <i class="fas fa-shield-halved" style="color: var(--accent-red);"></i>
+            <span>خط أحمر</span>
+          </a>
+          <p>
+            المبادرة العربية المتخصصة في السلامة الرقمية وحماية الفتيات من مخاطر الابتزاز الإلكتروني في كافة الدول العربية الـ 22. سلامتكِ الرقمية دائماً خط أحمر.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#guides">مركز التوعية</a></li>
+            <li><a href="#tools">أدوات الأمان الحية</a></li>
+            <li><a href="#quiz">اختبار الوعي السيبراني</a></li>
+            <li><a href="#about">عن المبادرة والجائزة</a></li>
+            <li><a href="#" class="open-admin-login" style="color:var(--accent-amber);"><i class="fas fa-user-lock"></i> لوحة التحكم (Admin CMS)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>أدوات ومساعدة</h4>
+          <ul>
+            <li><a href="#tools">فاحص كلمة السر</a></li>
+            <li><a href="#tools">محاكي التصيد</a></li>
+            <li><a href="#support">طوارئ الدول العربية الـ 22</a></li>
+            <li><a href="#" class="open-report-modal">طلب مساعدة مشفرة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-privacy-box">
+          <h5>
+            <i class="fas fa-lock"></i>
+            تأكيد الخصوصية والسرية 100%
+          </h5>
+          <p>
+            تضمن مبادرة "خط أحمر" التزاماً صارماً بعدم جمع أو تتبع أو مشاركة أي بيانات شخصية أو عناوين IP للزوار بدون إذن صريح. تواصلكِ معنا مشفر ببروتوكولات عالية الأمان.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 جميع الحقوق محفوظة لمبادرة <strong>خط أحمر</strong> | مشاركة في جائزة الفتاة العربية والتكنولوجيا</p>
+        <p style="color:var(--accent-red); font-weight:700;">
+          <i class="fas fa-shield-alt"></i> سلامتك الرقمية.. خط أحمر
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       النافذة المنبثقة 1: استمارة الإبلاغ وطلب المساعدة المشفرة
+       ========================================================================== -->
+  <div class="modal-overlay" id="reportingModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeReportModal" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+
+      <div class="modal-header">
+        <h3><i class="fas fa-user-shield" style="color:var(--accent-red);"></i> طلب مساعدة أو إبلاغ آمن ومشفر</h3>
+        <p style="color:var(--text-secondary); font-size:0.88rem;">بياناتك مشفرة تماماً ولن تظهر لأي طرف خارجي. نحن هنا لمساعدتك بحرية وبدون أي أحكام.</p>
+      </div>
+
+      <div class="confidential-badge-banner">
+        <i class="fas fa-lock"></i>
+        <span>تشفير 256-bit آمن | لا يتم تسجيل عنوان IP الخاص بك</span>
+      </div>
+
+      <form id="reportForm">
+        <div class="form-group">
+          <label for="threatType">نوع المشكلة أو التهديد:</label>
+          <select id="threatType" class="form-control" required>
+            <option value="blackmail">تعرض لابتزاز رقمي أو تهديد</option>
+            <option value="phishing">اختراق حساب شخصي أو اختراق بريد</option>
+            <option value="harassment">مضايقات وتنمر إلكتروني</option>
+            <option value="fake_account">انتحال شخصية أو حساب مزيف</option>
+            <option value="consultation">استشارة أمان رقمي عامة</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contactWay">طريقة التواصل الفضلى معكِ (اختياري/مُشفر):</label>
+          <input type="text" id="contactWay" class="form-control" placeholder="مثال: بريد إلكتروني آمن، أو رقم تليجرام/واتساب">
+        </div>
+
+        <div class="form-group">
+          <label for="threatDetails">تفاصيل المشكلة (اذكري ما ترتاحين لقصّه فقط):</label>
+          <textarea id="threatDetails" class="form-control" placeholder="اشرحي لنا ما حدث باختصار كي نتمكن من إرشادك للخطوات الأنسب..." required></textarea>
+        </div>
+
+        <div style="margin-bottom: 1.2rem; font-size: 0.85rem; color: var(--text-muted);">
+          <input type="checkbox" id="agreePrivacy" checked required>
+          <label for="agreePrivacy" style="display:inline; font-weight:normal;">أوافق على معالجة هذا الطلب بسريّة تامة بواسطة فريق أمان خط أحمر.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          <i class="fas fa-paper-plane"></i>
+          <span>إرسال البلاغ بشكل آمن 100%</span>
+        </button>
+      </form>
+
+      <div id="reportSuccessBanner" style="display:none; margin-top:1.2rem; background:rgba(16,185,129,0.2); border:1px solid #10b981; color:#10b981; padding:1rem; border-radius:var(--radius-md); text-align:center; font-weight:700;">
+        <i class="fas fa-check-circle" style="font-size:1.8rem; margin-bottom:0.4rem; display:block;"></i>
+        تم استلام طلبكِ بنجاح وبسرية تامة! فريق الأمان بمبادرة خط أحمر سيتواصل معكِ في أقرب وقت. أنتِ بآمان!
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       النافذة المنبثقة 2: تفاصيل الأدلة التفاعلية (Guide Detail Modal)
+       ========================================================================== -->
+  <div class="modal-overlay" id="guideDetailModal">
+    <div class="modal-box" style="max-width:700px;">
+      <button class="modal-close" id="closeGuideModal" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+
+      <div class="modal-header">
+        <h3 id="guideModalTitle">تفاصيل الدليل</h3>
+      </div>
+
+      <div class="guide-modal-body" id="guideModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       النافذة المنبثقة 3: تسجيل دخول المشرف (Admin Login Modal) - الخانات فارغة
+       ========================================================================== -->
+  <div class="modal-overlay" id="adminLoginModal">
+    <div class="modal-box" style="max-width:420px;">
+      <button class="modal-close" id="closeAdminLogin" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+
+      <div class="modal-header" style="text-align:center; padding-left:0;">
+        <div style="width:60px; height:60px; border-radius:50%; background:rgba(245,158,11,0.15); color:var(--accent-amber); display:inline-flex; align-items:center; justify-content:center; font-size:1.8rem; margin-bottom:0.8rem;">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h3>دخول لوحة تحكم المشرف (CMS)</h3>
+        <p style="font-size:0.85rem; color:var(--text-secondary);">أدخلي بيانات الدخول لإدارة محتوى الموقع والبلاغات</p>
+      </div>
+
+      <div id="adminLoginErr" style="display:none; background:rgba(255,42,95,0.2); border:1px solid var(--accent-red); color:var(--accent-red); padding:0.8rem; border-radius:8px; font-size:0.85rem; font-weight:bold; margin-bottom:1rem; text-align:center;"></div>
+
+      <form id="adminLoginForm" autocomplete="off">
+        <div class="form-group">
+          <label for="adminUser">اسم المستخدم (Username):</label>
+          <input type="text" id="adminUser" class="form-control" placeholder="أدخلي اسم المستخدم..." required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="adminPass">كلمة السر (Password):</label>
+          <input type="password" id="adminPass" class="form-control" placeholder="أدخلي كلمة السر..." required autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; background:var(--gradient-award);">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>تسجيل الدخول للوحة التحكم</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       النافذة المنبثقة 4: لوحة التحكم المباشرة (FULL ADMIN CMS DASHBOARD MODAL)
+       ========================================================================== -->
+  <div class="modal-overlay" id="cmsDashboardModal">
+    <div class="modal-box cms-modal-box">
+      <button class="modal-close" id="closeCMSModal" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+
+      <div class="cms-header-bar">
+        <div>
+          <h2 style="font-size:1.5rem; display:flex; align-items:center; gap:0.6rem;">
+            <i class="fas fa-sliders-h" style="color:var(--accent-amber);"></i>
+            لوحة تحكم إدارة محتوى "خط أحمر" (CMS Admin)
+          </h2>
+          <p style="font-size:0.85rem; color:var(--text-secondary);">إدارة نصوص الواجهة، أرقام الطوارئ، البلاغات الواردة، واستيراد وتصدير النسخ الاحتياطية</p>
+        </div>
+        <button class="btn btn-panic" id="adminLogoutBtn" style="padding:0.4rem 0.9rem; font-size:0.85rem;">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>تسجيل الخروج</span>
+        </button>
+      </div>
+
+      <!-- CMS Tabs Navigation -->
+      <div class="cms-nav-tabs">
+        <button class="cms-tab-btn active" data-pane="paneOverview"><i class="fas fa-chart-pie"></i> إحصائيات عامة</button>
+        <button class="cms-tab-btn" data-pane="paneContent"><i class="fas fa-edit"></i> نصوص الواجهة</button>
+        <button class="cms-tab-btn" data-pane="paneGuides"><i class="fas fa-book"></i> أدلة التوعية</button>
+        <button class="cms-tab-btn" data-pane="paneHotlines"><i class="fas fa-phone"></i> طوارئ الدول</button>
+        <button class="cms-tab-btn" data-pane="paneInbox"><i class="fas fa-inbox"></i> البلاغات الواردة</button>
+        <button class="cms-tab-btn" data-pane="paneSettings"><i class="fas fa-database"></i> النسخ الاحتياطي والإعدادات</button>
+      </div>
+
+      <!-- Pane 1: Overview -->
+      <div class="cms-tab-pane active" id="paneOverview">
+        <div class="cms-stats-grid">
+          <div class="cms-stat-box">
+            <div class="cms-stat-num" id="cmsStatReportsCount">0</div>
+            <div style="font-size:0.88rem; color:var(--text-secondary);">البلاغات والاستشارات الواردة</div>
+          </div>
+          <div class="cms-stat-box">
+            <div class="cms-stat-num" id="cmsStatGuidesCount">4</div>
+            <div style="font-size:0.88rem; color:var(--text-secondary);">أدلة الأمان والتعليم</div>
+          </div>
+          <div class="cms-stat-box">
+            <div class="cms-stat-num" id="cmsStatHotlinesCount">23</div>
+            <div style="font-size:0.88rem; color:var(--text-secondary);">أرقام الطوارئ والدول</div>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-card); padding:1.2rem; border-radius:12px; border:1px solid var(--border-color);">
+          <h4 style="margin-bottom:0.5rem; color:var(--accent-emerald);"><i class="fas fa-shield-alt"></i> حالة التشفير والحفظ المحلي النشطة</h4>
+          <p style="font-size:0.9rem; color:var(--text-secondary);">تعديلاتك تُحفظ مباشرة في متصفحك المحلي <code>LocalStorage</code>. يمكنك تصدير نسخة احتياطية كاملة في ملف JSON ونقلها لأي متصفح أو خادم بثوانٍ معدودة.</p>
+        </div>
+      </div>
+
+      <!-- Pane 2: Site Main Content -->
+      <div class="cms-tab-pane" id="paneContent">
+        <form id="cmsSiteForm">
+          <div class="form-group">
+            <label for="editHeroTitle">عنوان المبادرة الرئيسي (Hero Title):</label>
+            <input type="text" id="editHeroTitle" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="editHeroSlogan">الشعار اللفظي (Slogan):</label>
+            <input type="text" id="editHeroSlogan" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="editHeroDesc">الوصف التعريفي بالواجهة:</label>
+            <textarea id="editHeroDesc" class="form-control" required></textarea>
+          </div>
+
+          <hr style="border-color:var(--border-color); margin:1.5rem 0;">
+
+          <div class="form-group">
+            <label for="editAwardTitle">عنوان قسم جائزة الفتاة العربية والتكنولوجيا:</label>
+            <input type="text" id="editAwardTitle" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="editAwardDesc">وصف مشاركة الجائزة:</label>
+            <textarea id="editAwardDesc" class="form-control" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-save"></i>
+            <span>حفظ وتحديث المحتوى اللحظي</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Pane 3: Guides Management -->
+      <div class="cms-tab-pane" id="paneGuides">
+        <h4 style="margin-bottom:1rem;">الأدلة التوعوية الحالية:</h4>
+        <div id="cmsGuidesList" style="margin-bottom:2rem;"></div>
+
+        <h4 style="margin-bottom:1rem; border-top:1px solid var(--border-color); padding-top:1.5rem;">إضافة دليل توعوي جديد:</h4>
+        <form id="cmsAddGuideForm">
+          <div class="form-group">
+            <label for="newGuideTitle">عنوان الدليل:</label>
+            <input type="text" id="newGuideTitle" class="form-control" placeholder="مثال: حماية الرمز السري وحساب الوتساب" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newGuideAudience">الفئة المستهدفة:</label>
+            <select id="newGuideAudience" class="form-control">
+              <option value="teens">دليل الفتيات واليافعات (12-17 سنة)</option>
+              <option value="parents">دليل أولياء الأمور والأسرة</option>
+              <option value="both">جميع الفئات</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="newGuideIcon">كلاس الأيقونة (FontAwesome Icon Class):</label>
+            <input type="text" id="newGuideIcon" class="form-control" value="fas fa-shield-alt" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newGuideDesc">الملخص القصير (Card Description):</label>
+            <input type="text" id="newGuideDesc" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newGuideContent">المحتوى التفصيلي الكامل (HTML / Text):</label>
+            <textarea id="newGuideContent" class="form-control" placeholder="اكتبي تفاصيل الدليل والنصائح هنا..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i>
+            <span>إضافة الدليل فوراً</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Pane 4: Hotlines Management -->
+      <div class="cms-tab-pane" id="paneHotlines">
+        <h4 style="margin-bottom:1rem;">قائمة طوارئ الدول الحالية:</h4>
+        <div id="cmsHotlinesList" style="max-height:250px; overflow-y:auto; margin-bottom:1.5rem;"></div>
+
+        <h4 style="margin-bottom:1rem; border-top:1px solid var(--border-color); padding-top:1.5rem;">إضافة دولة / رقم طوارئ جديد:</h4>
+        <form id="cmsAddHotlineForm">
+          <div class="form-group">
+            <label for="newHotlineCountry">اسم الدولة مع العلم:</label>
+            <input type="text" id="newHotlineCountry" class="form-control" placeholder="مثال: 🇸🇦 المملكة العربية السعودية" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newHotlineCyber">رقم طوارئ الجرائم الإلكترونية:</label>
+            <input type="text" id="newHotlineCyber" class="form-control" placeholder="مثال: 1909" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newHotlineNotes">ملاحظات والتطبيق المعتمد:</label>
+            <input type="text" id="newHotlineNotes" class="form-control" placeholder="مثال: تطبيق كلنا أمن المعتمد" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-plus"></i>
+            <span>إضافة طوارئ الدولة</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Pane 5: Inbox Reports -->
+      <div class="cms-tab-pane" id="paneInbox">
+        <h4 style="margin-bottom:1rem;">البلاغات والاستشارات المشفرة الواردة من الزوار:</h4>
+        <div id="cmsInboxList"></div>
+      </div>
+
+      <!-- Pane 6: Backup & Settings -->
+      <div class="cms-tab-pane" id="paneSettings">
+        <h4 style="margin-bottom:1rem;">تصدير واستعادة النسخ الاحتياطية (JSON Backup):</h4>
+        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;">
+          يمكنك حفظ نسخة كاملة من بيانات ومحتويات الموقع، أو استعادتها على أي جهاز آخر بنقرة واحدة.
+        </p>
+
+        <div class="backup-actions-box">
+          <button class="btn btn-primary" onclick="exportBackupJSON()" style="background:var(--gradient-btn-secondary);">
+            <i class="fas fa-download"></i>
+            <span>تصدير نسخة احتياطية (.json)</span>
+          </button>
+
+          <label class="btn btn-secondary" style="cursor:pointer; display:inline-flex; margin:0;">
+            <i class="fas fa-upload"></i>
+            <span>استعادة من ملف (.json)</span>
+            <input type="file" accept=".json" onchange="importBackupJSON(event)" style="display:none;">
+          </label>
+
+          <button class="btn btn-panic" onclick="resetStateToDefaults()">
+            <i class="fas fa-trash-restore"></i>
+            <span>إعادة ضبط البيانات للوضع الافتراضي</span>
+          </button>
+        </div>
+
+        <hr style="border-color:var(--border-color); margin:2rem 0;">
+
+        <h4 style="margin-bottom:1rem;">تغيير كلمة سر المشرف (Admin Password):</h4>
+        <form id="cmsChangePassForm" style="max-width:400px;">
+          <div class="form-group">
+            <label for="newAdminPass">كلمة السر الجديدة:</label>
+            <input type="password" id="newAdminPass" class="form-control" placeholder="أدخلي كلمة السر الجديدة..." required>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-key"></i>
+            <span>تحديث كلمة السر</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flat Relative Script -->
+  <script src="./main.js"></script>
+</body>
+</html>
